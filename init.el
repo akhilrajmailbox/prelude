@@ -145,4 +145,7 @@ by Prelude.")
  ;; greet the use with some useful tip
  (run-at-time 5 nil 'prelude-tip-of-the-day))
 
+(require 'neotree)
+(global-set-key (kbd "C-t") 'neotree-toggle)
+
 ;;; init.el ends here
