@@ -709,6 +709,9 @@ Bug reports and suggestions for improvements are always
 welcome. GitHub pull requests are even better! :-)
 
 Cheers,<br/>
-[Bozhidar](https://twitter.com/bbatsov)
+[Akhil Raj](https://github.com/akhilrajmailbox)
+
+Reference,<br/>
+[go](https://github.com/bbatsov/prelude)
 
 [badge-license]: https://img.shields.io/badge/license-GPL_3-green.svg
