@@ -7,6 +7,13 @@ User Environment
 
 Create user in ubuntu systems with script "user-create.sh" for getting customized environment
 
+Reconfigure Options
+===================
+
+```
+1) update init.el
+2) update *.el file under core folder
+```
 
 Emacs Prelude
 =============
@@ -94,13 +101,13 @@ source repository and the installation directory. To change the
 installation directory:
 
 ```bash
-export PRELUDE_INSTALL_DIR="$HOME/.emacs.d" && curl -L https://github.com/bbatsov/prelude/raw/master/utils/installer.sh | sh
+export PRELUDE_INSTALL_DIR="$HOME/.emacs.d" && curl -L https://github.com/akhilrajmailbox/prelude/raw/master/utils/installer.sh | sh
 ```
 
 To change the source repository:
 
 ```bash
-export PRELUDE_URL="https://github.com/yourname/prelude.git" && curl -L https://github.com/bbatsov/prelude/raw/master/utils/installer.sh | sh
+export PRELUDE_URL="https://github.com/yourname/prelude.git" && curl -L https://github.com/akhilrajmailbox/prelude/raw/master/utils/installer.sh | sh
 ```
 
 Note that the installer will back up any existing `.emacs` file or
@@ -130,7 +137,7 @@ You can install **Emacs Prelude** via the command line with either `curl` or
 If you're using `curl` type the following command:
 
 ```bash
-curl -L https://github.com/bbatsov/prelude/raw/master/utils/installer.sh | sh
+https://github.com/akhilrajmailbox/prelude/raw/master/utils/installer.sh | sh
 ```
 
 #### Via Wget
@@ -138,7 +145,7 @@ curl -L https://github.com/bbatsov/prelude/raw/master/utils/installer.sh | sh
 If you're using `wget` type:
 
 ```bash
-wget --no-check-certificate https://github.com/bbatsov/prelude/raw/master/utils/installer.sh -O - | sh
+wget --no-check-certificate https://github.com/akhilrajmailbox/prelude/raw/master/utils/installer.sh -O - | sh
 ```
 
 ### Manual
