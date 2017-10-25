@@ -92,8 +92,7 @@
     neotree
     tabbar
     all-the-icons
-    groovy-mode
-    mouse)
+    groovy-mode)
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
