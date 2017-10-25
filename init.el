@@ -150,14 +150,6 @@ by Prelude.")
 
 ;; Akhil 
 ;; install
-(add-to-list 'package-archives
-                 '("melpa" . "http://melpa.org/packages/"))
-
-;; (prelude-require-packages '(neotree tabbar all-the-icons groovy-mode mouse))
-
-;; nodetree
-(require 'neotree)
-(global-set-key (kbd "C-t") 'neotree-toggle)
 
 
 
