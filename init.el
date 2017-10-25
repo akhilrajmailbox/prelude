@@ -150,6 +150,80 @@ by Prelude.")
 
 ;; Akhil 
 ;; install
+;; edit .el files under core directory
+(key-chord-define-global "vv" 'move-text-down)
+(key-chord-define-global "^^" 'move-text-up)
+
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
+(setq indent-line-function 'insert-tab)
+
+
+
+
+;; scroll one line at a time (less "jumpy" than defaults)
+
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+(setq scroll-step 1) ;; keyboard scroll one line at a time
+
+;; mouse selection
+(require 'mouse)
+(xterm-mouse-mode t)
+(defun track-mouse (e))
+(setq mouse-sel-mode t)
+
+(require 'neotree)
+(global-set-key (kbd "C-t") 'neotree-toggle)
+
+(require 'all-the-icons)
+(require 'groovy-mode)
+(require 'tabbar)
+; Tabbar settings
+(set-face-attribute 'tabbar-default nil :background "gray20" :foreground "gray20" :box '(:line-width 1 :color "gray20" :style nil))
+(set-face-attribute 'tabbar-unselected nil :background "gray30" :foreground "white" :box '(:line-width 5 :color "gray30" :style nil))
+(set-face-attribute 'tabbar-selected nil :background "gray75" :foreground "black" :box '(:line-width 5 :color "gray75" :style nil))
+(set-face-attribute 'tabbar-highlight nil :background "white" :foreground "black" :underline nil :box '(:line-width 5 :color "white" :style nil))
+(set-face-attribute 'tabbar-button nil :box '(:line-width 1 :color "gray20" :style nil))
+(set-face-attribute 'tabbar-separator nil :background "gray20" :height 0.6)
+
+;; Change padding of the tabs
+;; we also need to set separator to avoid overlapping tabs by highlighted tabs
+(custom-set-variables
+ '(tabbar-separator (quote (0.5))))
+;; adding spaces
+(defun tabbar-buffer-tab-label (tab)
+;    "Return a label for TAB.
+;    That is, a string used to represent it on the tab bar."
+    (let ((label  (if tabbar--buffer-show-groups
+                      (format " [%s]  " (tabbar-tab-tabset tab))
+                   (format " %s |" (tabbar-tab-value tab)))))
+    ;; Unless the tab bar auto scrolls to keep the selected tab
+    ;; visible, shorten the tab label to keep as many tabs as possible
+     ;; in the visible area of the tab bar.
+      (if tabbar-auto-scroll-flag
+         label
+       (tabbar-shorten
+        label (max 1 (/ (window-width)
+                        (length (tabbar-view
+                                 (tabbar-current-tabset)))))))))
+
+(tabbar-mode t)
+;; tabbar
+;; example tabbar coloring code...
+
+(global-set-key (kbd "C-S-p") 'tabbar-backward-group)
+(global-set-key (kbd "C-S-n") 'tabbar-forward-group)
+(global-set-key (kbd "C-<") 'tabbar-backward)
+(global-set-key (kbd "C->") 'tabbar-forward)
+
+(add-to-list 'auto-mode-alist '("\\.groovy\\'" . groovy-mode))
+;;disable whitespace mode by default
+(setq prelude-whitespace nil)
+
+(global-unset-key (kbd "M-<down-mouse-1>"))
+(global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
 
 
 
