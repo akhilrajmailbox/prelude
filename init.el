@@ -156,8 +156,8 @@ by Prelude.")
              '("melpa" . "http://melpa.org/packages/"))
 
 
-(key-chord-define-global "vv" 'move-text-down)
-(key-chord-define-global "^^" 'move-text-up)
+;;(key-chord-define-global "vv" 'move-text-down)
+;;(key-chord-define-global "^^" 'move-text-up)
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
