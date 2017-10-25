@@ -159,11 +159,17 @@ by Prelude.")
 ;;(key-chord-define-global "vv" 'move-text-down)
 ;;(key-chord-define-global "^^" 'move-text-up)
 
+;;(require 'helm)
+;; install in ubuntu 16.04 :: apt-get install elpa-helm
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
+(helm-mode 1)
+
+
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
 (setq indent-line-function 'insert-tab)
-
-
 
 
 ;; scroll one line at a time (less "jumpy" than defaults)
@@ -174,10 +180,10 @@ by Prelude.")
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
 ;; mouse selection
-;;(require 'mouse)
-;;(xterm-mouse-mode t)
-;;(defun track-mouse (e))
-;;(setq mouse-sel-mode t)
+(require 'mouse)
+(xterm-mouse-mode t)
+(defun track-mouse (e))
+(setq mouse-sel-mode t)
 
 ;;(require 'neotree)
 (global-set-key (kbd "C-t") 'neotree-toggle)
