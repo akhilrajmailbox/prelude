@@ -151,6 +151,11 @@ by Prelude.")
 ;; Akhil 
 ;; install
 ;; edit .el files under core directory
+
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/"))
+
+
 (key-chord-define-global "vv" 'move-text-down)
 (key-chord-define-global "^^" 'move-text-up)
 
