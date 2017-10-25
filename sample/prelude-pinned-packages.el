@@ -1,5 +1,7 @@
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/"))
 
 (setq package-pinned-packages
       '(
@@ -130,9 +132,9 @@
         (yasnippet . "melpa-stable")
         (zenburn-theme . "melpa-stable")
         (zop-to-char . "melpa-stable")
-        (neotree . "melpa-stable")
-        (tabbar . "melpa-stable")
-        (all-the-icons . "melpa-stable")
-        (groovy-mode . "melpa-stable")
-        (mouse . "melpa-stable")
+        (neotree . "melpa")
+        (tabbar . "melpa")
+        (all-the-icons . "melpa")
+        (groovy-mode . "melpa")
+        (mouse . "melpa")
         ))
