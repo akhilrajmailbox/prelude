@@ -152,19 +152,17 @@ by Prelude.")
 ;; install
 ;; edit .el files under core directory
 
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/"))
-
 
 ;;(key-chord-define-global "vv" 'move-text-down)
 ;;(key-chord-define-global "^^" 'move-text-up)
 
-;;(require 'helm)
 ;; install in ubuntu 16.04 :: apt-get install elpa-helm
+(require 'helm)
+(helm-mode 1)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
 (global-set-key (kbd "C-x C-f") #'helm-find-files)
-(helm-mode 1)
+
 
 
 (setq-default indent-tabs-mode nil)
@@ -185,14 +183,15 @@ by Prelude.")
 (defun track-mouse (e))
 (setq mouse-sel-mode t)
 
-;;(require 'neotree)
+(require 'neotree)
 (global-set-key (kbd "C-t") 'neotree-toggle)
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
-;;(require 'all-the-icons)
-;;(require 'groovy-mode)
-;;(require 'tabbar)
-; Tabbar settings
+(require 'all-the-icons)
+(require 'groovy-mode)
+
+(require 'tabbar)
+;;Tabbar settings
 (set-face-attribute 'tabbar-default nil :background "gray20" :foreground "gray20" :box '(:line-width 1 :color "gray20" :style nil))
 (set-face-attribute 'tabbar-unselected nil :background "gray30" :foreground "white" :box '(:line-width 5 :color "gray30" :style nil))
 (set-face-attribute 'tabbar-selected nil :background "gray75" :foreground "black" :box '(:line-width 5 :color "gray75" :style nil))
