@@ -88,7 +88,12 @@
     volatile-highlights
     which-key
     zenburn-theme
-    zop-to-char)
+    zop-to-char
+    neotree
+    tabbar
+    all-the-icons
+    groovy-mode
+    mouse)
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
