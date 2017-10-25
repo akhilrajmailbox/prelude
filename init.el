@@ -181,6 +181,7 @@ by Prelude.")
 
 ;;(require 'neotree)
 (global-set-key (kbd "C-t") 'neotree-toggle)
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 ;;(require 'all-the-icons)
 ;;(require 'groovy-mode)
