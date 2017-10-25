@@ -91,6 +91,8 @@
     zop-to-char
     neotree
     tabbar
+    tabbar-ruler
+    tab-group
     helm
     all-the-icons
     groovy-mode)
