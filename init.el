@@ -174,17 +174,17 @@ by Prelude.")
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
 ;; mouse selection
-(require 'mouse)
-(xterm-mouse-mode t)
-(defun track-mouse (e))
-(setq mouse-sel-mode t)
+;;(require 'mouse)
+;;(xterm-mouse-mode t)
+;;(defun track-mouse (e))
+;;(setq mouse-sel-mode t)
 
-(require 'neotree)
+;;(require 'neotree)
 (global-set-key (kbd "C-t") 'neotree-toggle)
 
-(require 'all-the-icons)
-(require 'groovy-mode)
-(require 'tabbar)
+;;(require 'all-the-icons)
+;;(require 'groovy-mode)
+;;(require 'tabbar)
 ; Tabbar settings
 (set-face-attribute 'tabbar-default nil :background "gray20" :foreground "gray20" :box '(:line-width 1 :color "gray20" :style nil))
 (set-face-attribute 'tabbar-unselected nil :background "gray30" :foreground "white" :box '(:line-width 5 :color "gray30" :style nil))
