@@ -91,9 +91,6 @@
     zop-to-char
     neotree
     tabbar
-    tabbar-ruler
-    tab-group
-    helm
     all-the-icons
     groovy-mode)
   "A list of packages to ensure are installed at launch.")
