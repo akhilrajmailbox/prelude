@@ -153,15 +153,15 @@ by Prelude.")
 ;; edit .el files under core directory
 
 
-;;(key-chord-define-global "vv" 'move-text-down)
-;;(key-chord-define-global "^^" 'move-text-up)
+(key-chord-define-global "vv" 'move-text-down)
+(key-chord-define-global "^^" 'move-text-up)
 
 ;; install in ubuntu 16.04 :: apt-get install elpa-helm
-(require 'helm)
-(helm-mode 1)
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
-(global-set-key (kbd "C-x C-f") #'helm-find-files)
+;;(require 'helm)
+;;(helm-mode 1)
+;;(global-set-key (kbd "M-x") 'helm-M-x)
+;;(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
+;;(global-set-key (kbd "C-x C-f") #'helm-find-files)
 
 
 
